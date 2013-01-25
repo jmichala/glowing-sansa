@@ -3,4 +3,6 @@ glowing-sansa
 
 Coding Learning
 
-Man, git is hard.
+Hello Carl and Vivek!
+
+I found the article I was looking for, so I'll try to get a general "Theory Behind our Project" page typed up pretty soon.
