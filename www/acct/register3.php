@@ -28,9 +28,9 @@
         // http://us.php.net/manual/en/function.filter-var.php
         // http://us.php.net/manual/en/filter.filters.php
 //        if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
-//        {
-//            die("Invalid E-Mail Address");
-//        }
+  //      {
+    //        die("Invalid E-Mail Address");
+      //  }
         
         // We will use this SQL query to see whether the username entered by the
         // user is already in use.  A SELECT query is used to retrieve data from the database.
@@ -81,38 +81,41 @@
         
         // Now we perform the same type of check for the email address, in order
         // to ensure that it is unique.
-        $query = "
-            SELECT
-                1
-            FROM users
-            WHERE
-                email = :email
-        ";
+          $query = "
+              SELECT
+                  1
+              FROM users
+              WHERE
+                   = :email
+          ";
         
-        $query_params = array(
-            ':email' => $_POST['email']
-        );
-        
-        try
-        {
-            $stmt = $db->prepare($query);
-            $result = $stmt->execute($query_params);
-        }
-        catch(PDOException $ex)
-        {
-            die("Failed to run query: " . $ex->getMessage());
-        }
-        
-        $row = $stmt->fetch();
-        
-        if($row)
-        {
-            //die("This email address is already registered");
-        }
+          $query_params = array(
+              ':' => $_POST['email']
+          );
+          
+          try
+          {
+              $stmt = $db->prepare($query);
+              $result = $stmt->execute($query_params);
+          }
+          catch(PDOException $ex)
+          {
+              die("Failed to run query: " . $ex->getMessage());
+          }
+  //      
+ //       $row = $stmt->fetch();
+//        
+//        if($row)
+ //       {
+  //          die("This email address is already registered");
+   //     }
         
         // An INSERT query is used to add new rows to a database table.
         // Again, we are using special tokens (technically called parameters) to
         // protect against SQL injection attacks.
+
+
+
         $query = "
             INSERT INTO users (
                 username,
@@ -194,7 +197,7 @@
     <br /><br />
     E-Mail:<br />
     <input type="hidden" name="email" value="email" />
-    <br /><br />
+    <br /><br /> 
     Password:<br />
     <input type="password" name="password" value="" />
     <br /><br />

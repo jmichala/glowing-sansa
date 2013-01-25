@@ -1,4 +1,5 @@
  <?php
+//SOURCE: http://forums.devshed.com/php-faqs-and-stickies-167/how-to-program-a-basic-but-secure-login-system-using-891201.html
 
     // These variables define the connection information for your MySQL database
     $username = "sansa";
