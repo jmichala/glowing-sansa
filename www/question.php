@@ -255,11 +255,12 @@ echo '		<table class = "answer-panel" align="center">
 			<td>
 				<div class="white-panel">
 					<ul class="codeLines">
-						<li>  Hint<!--hint about code line --> </li>
+						'. $lesson["ht2"] .
+						/*<li>  Hint<!--hint about code line --> </li>
 						<li> Hint<!--hint about code line --> </li>
 						<li> Hint<!--hint about code line --> </li>
 						<li> Hint <!--hint about code line --> </li>
-						<li>  Hint<!--hint about code line --> </li>
+						<li>  Hint<!--hint about code line --> </li>*/'
 					</ul>	
 				</div>
 			</tr>
