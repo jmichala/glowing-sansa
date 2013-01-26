@@ -171,6 +171,7 @@ span.blue {
     width:400px;
     height:150px;
     padding: 10px;
+    margin: 10px;
     -webkit-border-radius: 15px;
     background-color: #ffffff; /*-- Welcome Box Color --*/
 }
@@ -287,7 +288,7 @@ input.register {
     background-color:#000000;
     border-style:solid;
     border-width: 5px;
-    width: 200px;
+    width: 400px;
     height: 150px;
     text-align: center;
     -webkit-border-radius: 15px;
@@ -307,9 +308,34 @@ input.register {
     text-align: left;
     margin: 20px 10px 10px 50px;   
 }
+.big-white-panel{
+    background-color:#ffffff;
+    width:400px;
+    height:150px;
+    border-style:solid;
+    opacity:1;
+    border-width: 5px;
+    border-color:#5b0e00;
+    -webkit-border-radius: 15px;
+    margin: 2px 2px 2px 2px;
+    z-index:50;
+}
+.big-black-panel{
+    background-color:#000000;
+    width:400px;
+    height:150px;
+    border-style:solid;
+    opacity:1;
+    border-width: 5px;
+    border-color:#5b0e00;
+    -webkit-border-radius: 15px;
+    margin: 2px 2px 2px 2px;
+    z-index:50;
+}    	
+
 .white-panel {
     background-color:#ffffff;
-    width:200px;
+    width:250px;
     height:150px;
     border-style:solid;
     opacity:1;
@@ -455,6 +481,7 @@ answer-contain-true p{
     margin: 0;
     margin-top: 10px;
     line-height: 25px;
+    font-size:12px;
 }
 .codeLinesAnswers {
     text-decoration:none;
@@ -462,12 +489,48 @@ answer-contain-true p{
     padding: 0;
     margin: 0;
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 12px;
 }
 .codeLinesAnswers li{
     padding: 15px;
     font-size: 16px;
 }
+
+
+/*----------Project Choices ------------*/
+.proj_panel{
+        text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.proj_panel a {
+        color:#8a0808
+}
+
+.proj_contain{
+    background-color: #ffffff;
+    border-style:solid;
+    border-color: #8a0808;
+    border-width: 5px;
+    width: 150px;
+    height: 400px;
+    -webkit-border-radius: 15px;
+}
+
+.proj_contain:hover{
+    background-color: #6b6b6b;
+}
+
+.proj_link  {
+    /*-- Link Styles Here --*/
+}
+.proj_post {
+    margin-left:20px;
+    margin-right:20px;
+    padding: 0px;
+}
+
 
 /*-------------Hint Window ------------*/
 .hint-contain {
