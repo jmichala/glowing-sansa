@@ -94,7 +94,7 @@ $(document).ready(function() {
 			</div>
 			<div class = "text-box">
 				<div class = "title"> Clients login <span></span> </div>
-				<form action="acct/register.php" method="post">
+				<form action="acct/login.php" method="post">
 				<div class = "login-form-row">
 					<label class="login-label"> Username: </label> <input type="text" name="name" class= "login_input"/>
 				</div>
