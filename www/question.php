@@ -1,0 +1,228 @@
+<?php
+    require("common.php");
+    if(empty($_SESSION['user']))
+    {
+        header("Location: acct/login.php");
+        die("Redirecting to login.php");
+    }
+    // Everything below this point in the file is secured by the login system
+
+//JSON file parsing
+$string=file_get_contents("curriculum.json");
+$json_a=json_decode($string, true);
+$lesson=$json_a[$_SESSION['user']['lesson']];
+
+//Get values from user for display
+$uid=htmlentities($_SESSION['user']['id'], ENT_QUOTES, 'UTF-8');
+$username=htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8');
+$lesson_num=htmlentities($_SESSION['user']['lesson'], ENT_QUOTES, 'UTF-8');
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>		
+	<script src="js/jquery.js"> </script>
+	<title> Code Learning </title>
+	<link rel="stylesheet" type = "text/css" href="css/hackathon-style.css" />
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#slidenav').animate({
+        left: '-1000px'
+    }, 200);
+    $('#open a').toggle(
+        function(){
+            $('#slidenav').animate({
+                left: '25%'
+            }, 500);
+        },
+        function(){
+            $('#slidenav').animate({
+                left: '-1000px'
+            }, 500);
+    	});
+		$('.answer-link-false1').click(
+			function(){
+				$("#nextPage").animate({
+					left: '800px'
+				}, 500);	
+				$(".answer-contain-false1").css({"backgroundColor": "#DD0000"});
+				$("#nextPage").attr("href","#");
+			});
+		$('.answer-link-false3').click(
+			function(){
+				$("#nextPage").animate({
+					left: '800px'
+				}, 500);	
+				$(".answer-contain-false3").css({"backgroundColor": "#DD0000"});
+				$("#nextPage").attr("href","#");
+			});	
+		$('.answer-link-false2').click(
+			function(){
+				$("#nextPage").animate({
+					left: '800px'
+				}, 500);	
+				$(".answer-contain-false2").css({"backgroundColor": "#DD0000"});
+				$("#nextPage").attr("href","#");
+			});
+		$('.answer-link-true').click(
+			function(){
+				$("#nextPage").animate({
+					left: '800px'
+				}, 500);
+				$(".answer-contain-true").css({"backgroundColor": "#00DD00"});
+				$("#nextPage").attr("href","#");
+			});
+    });
+</script>
+<header>
+	<h1> Cool </h1>
+</header>
+	
+<div id="main-content">
+	<!-- Main Menu For the Selection of Topics -->
+	<div class="main-menu">
+		<span class="menuRect">
+			<ul>
+				<li> <a href=****> Home </a> </li>
+				<li> <a href=****> Courses </a> 
+					<ul>
+						<li> <a href=****> Python </a> </li>
+						<li> <a href=****> Ruby </a> </li>
+						<li> <a href=****> Obj.C </a> </li>
+					</ul>
+				</li>
+				<li> <a href=****> Information </a> 
+					<ul>
+						<li> <a href=****> about us </a> </li>
+						<li> <a href=****> Cool Stuff </a> </li>
+						<li> <a href=****> Hello </a> </li>
+					</ul>
+				</li>
+					
+				<li> <a href=****> Link Name </a> </li>
+				<li> <a href=****> Link Name </a> </li>
+			</ul>
+		</span>
+	</div>
+	<div class = "center-content">
+		<div class= "username-display"> Welcome, <?php echo $username; ?>.</div>
+		<!-- Php script sends what section we are working on--> </div>
+		<div class = "section-title"> <span class="blue"> Section <?php echo $lesson["sn"]; ?> </span>: <?php echo $lesson["sname"]; ?> </div>
+		<div id="move-foreward">
+			<div id="nextPage">
+				<a href ='#'>
+					<img src="images/green-arrow.png"/>
+				</a>
+			</div>	
+		</div>
+		
+		<!-- Question Panel -->
+		<table align= "center">	
+		<tr>
+		<td>
+			<div class = "question-panel">
+				<div class = "instruction"> <!--I.E. I don't think we need this?--> </div> 
+				<div class = "q-container">
+					<p class = "question"> <?php echo $lesson["ptext"]; ?> </p>
+				</div>
+			</div>
+		</td>
+		<tr>
+		</table>
+		
+<?php
+//GENERATE LESSON BOXES
+$num=1;
+if ($lesson["ans"] == 1)
+{ $b1 = "true"; }
+else
+{ $b1 = "false" . $num; $num=$num+1; }
+if ($lesson["ans"] == 2)
+{ $b2 = "true"; }
+else
+{ $b2 = "false" . $num; $num=$num+1; }
+if ($lesson["ans"] == 3)
+{ $b3 = "true"; }
+else
+{ $b3 = "false" . $num; $num=$num+1; }
+if ($lesson["ans"] == 4)
+{ $b4 = "true"; }
+else
+{ $b4 = "false" . $num; }
+$boxes[0] = '
+				<td>
+					<a href="#" class="answer-link-' . $b1 . '">
+					<div class = "answer-contain-' . $b1 . '"> 
+						<p>' . $lesson["a1"] . '</p>
+					</div>
+					</a>
+				</td>
+';
+$boxes[1] = '
+			<td>
+				<a href="#" class="answer-link-'. $b2 .'">
+				<div class = "answer-contain-'. $b2 .'"> 
+					<p>' . $lesson["a2"] . '</p>
+				</div>
+				</a>
+			</td>
+';
+$boxes[2] = '
+				<td>
+					<a href="#" class="answer-link-'. $b3 .'">
+					<div class = "answer-contain-'. $b3 .'"> 
+						<p>' . $lesson["a3"] . '</p>
+					</div>
+					</a>
+				</td>
+';
+$boxes[3] = '
+			<td>
+				<a href="#" class="answer-link-'. $b4 .'">
+				<div class = "answer-contain-'. $b4 .'"> 
+					<p> ' . $lesson["a4"] . '</p>
+				</div>
+				</a>
+			</td>
+';
+
+shuffle($boxes);
+?>
+
+
+		<!--Answers-->
+		<table class = "answer-panel" align="center">
+			<tr>
+<?php echo $boxes[0], $boxes[1]; ?>
+			</tr>
+			<tr>
+<?php echo $boxes[2], $boxes[3]; ?>
+			</tr>
+		</table>	
+		<!-- Hint Window -->
+		<div id="slidenav">
+			<div class="hint-contain">
+				<div class="hint-text">
+					<p> <?php echo $lesson["ht"]; ?> </p>
+				</div>
+			</div>
+		</div>
+		<div id="open">
+			<a href='#'> 
+				<img src="images/questionMark.png" />
+			</a>
+		</div>
+		<!--   End of Center Content -->
+	</div>
+</div>
+<div class="footer"> 
+	<!--Footer Stuff-->
+</div>
+</body>
+</html>
+		
+	

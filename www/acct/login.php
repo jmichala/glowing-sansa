@@ -20,7 +20,8 @@
                 username,
                 password,
                 salt,
-                email
+                email,
+		lesson
             FROM users
             WHERE
                 username = :username

@@ -1,0 +1,301 @@
+body {
+    background-color: #5b0e00;
+    padding:0;
+    font-family: arial, sans-serif;
+    font-size: 12px;
+    color: #5b0e00; /*--background color --*/
+    min-width: 821px;
+}
+header h1{
+    color:#ffffff;
+    text-align: center;
+}
+p {
+    padding: 0px;
+    text-align: justify;
+    margin:0x;
+    line-height: 20px;
+}
+a {
+    text-decoration: underline;
+}
+#main-content {
+    width: 821px;
+    height: auto;
+    margin: auto;
+    padding: 0x;
+    margin-top: 30px;
+    background-color: #FF1e00;
+    text-align: center;
+    -webkit-border-radius: 15px;
+}
+#header {
+    width:821px;
+    height:auto;
+    padding: 0px;
+}
+img.logo {
+    padding :30 0 0 0px;
+    position:absolute;
+    left:50%;
+}
+/*---------------------Menu-----------------*/
+.main-menu {
+    width:821px;
+    border-top: solid #ffffff;
+    height: 40px; /*-- Menu Height --*/
+    margin: 0px 0 5px 0; /*-- How far the margin is from top bottom elements --*/
+    background-color:#BB0030;
+    padding: 0;
+    -webkit-border-radius: 15px; /*------ Rounded Edges -----*/
+}
+.menuRect {
+    display:block;
+    background-color: #BB0030;
+    height: 40px;
+    width: 821px;
+}
+.main-menu ul {
+    list-style: none;
+    padding: 0 0 0 0;
+    margin-left: 24px; /*----- How far list is from the left -------*/
+}
+.main-menu ul li {
+    display:block;
+    float:left;
+    position: relative;
+}
+.main-menu li ul{
+    display:none;
+}
+.main-menu ul li a {
+    display:block;
+    height: 40px; /*-- Menu Height --*/
+    padding: 0 15px 0 15px; /*-- How far each list item is from each other --*/
+    text-decoration: none;
+    color:#ffffff;
+    line-height: 35px; /*-- Menu Height--*/
+    font-size: 16px;
+    background:#BB0030;
+    white-space: nowrap;
+}
+.main-menu ul li.selected a {
+    float:left;
+    height: 40px;
+    border: none;
+    padding: 0 15px 0 15px;
+    text-decoration: none;
+    color: #fff;
+    line-height: 40px; /*-- Menu Height --*/
+    font-size: 16px;
+    background-color: #6b6b6b;
+}
+.main-menu ul li a:hover {
+    background: #6b6b6b; /*--scroll over link color ---*/
+}
+.main-menu li:hover ul{
+    display:block;
+    position: absolute;
+}
+.main-menu li:hover li{
+    float:none;
+    font-size: 12px;
+}
+.main-menu li:hover a{
+    background: #6b6b6b;
+}
+.main-menu li:hover li a:hover{
+    background: #BB0030;
+}
+
+/*-- Center Content Section --*/
+.center-content {
+    width:821px;
+    height:auto;
+    clear:both;
+    padding: 0 0 30px 0;
+    text-align:center;
+}
+.username-display {
+    font-size: 14px;
+    text-align: right;
+    color:#ffffff;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.section-title {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+span.blue {
+    font-weight:bold;
+    color:#00b2ee; /*--Color of the word SECTION--*/
+}
+#move-foreward{
+    width: 821px;
+    height: 50px;
+}
+#nextPage { /*--The green Arrow Hyperlink--*/
+    position: absolute;
+    margin-right: 100px;
+    text-align: right;
+    left: 3000px;
+    top:200px;
+    height: 50px;
+    z-index:990;
+    width: 100px;
+    height: 100px;
+    padding: 20px 50px;
+}
+
+/*----------------Question-------------*/
+.question-panel {
+    background-color:#000000;
+    border-style:solid;
+    border-width: 5px;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    -webkit-border-radius: 15px;
+}
+.instruction {
+    margin-top: 5px;
+    font-size: 16px;
+    font-style: bold;
+    color: #ffffff;
+}
+.q-container {
+    color: #ffffff;
+    font-size:12px;
+    text-align: center;
+}
+.question {
+    text-align: left;
+    margin: 20px 10px 10px 50px;
+    
+}
+/*---------Answers----------*/
+.answer-panel {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    border-color:#5b0e00;
+}
+.answer-panel a{
+    text-decoration:none;
+}
+.answer-panel a div p{
+    margin: 20px 30px 20px 30px;
+}
+.answer-contain-false1 {
+    background-color:#ffffff;
+    border-style:solid;
+    border-width: 5px;
+    border-color:#5b0e00;
+    width: 200px;
+    height: 150px;
+    -webkit-border-radius: 15px;
+    margin: 2px 2px 2px 2px;
+}
+.answer-contain-false2 {
+    background-color:#ffffff;
+    border-style:solid;
+    border-width: 5px;
+    border-color:#5b0e00;
+    width: 200px;
+    height: 150px;
+    -webkit-border-radius: 15px;
+    margin: 2px 2px 2px 2px;
+}
+.answer-contain-false3 {
+    background-color:#ffffff;
+    border-style:solid;
+    border-width: 5px;
+    border-color:#5b0e00;
+    width: 200px;
+    height: 150px;
+    -webkit-border-radius: 15px;
+    margin: 2px 2px 2px 2px;
+}
+.answer-contain-true {
+    background-color:#ffffff;
+    border-style:solid;
+    border-width: 5px;
+    border-color: #5b0e00;
+    width: 200px;
+    height: 150px;
+    -webkit-border-radius: 15px;
+    margin: 2px 2px 2px 2px;
+}
+.answer-contain-true:hover {
+    background-color: #6c6c6c;
+}
+.answer-contain-false1:hover {
+    background-color: #6c6c6c;
+}
+.answer-contain-false2:hover {
+    background-color: #6c6c6c;
+}
+.answer-contain-false3:hover {
+    background-color: #6c6c6c;
+}
+.answer-link-true {
+    margin:0 auto;
+    padding:5px;
+    font-size:12px;
+    z-index:9999;
+}
+.answer-link-false1 {
+    margin:0 auto;
+    padding:5px;
+    font-size:12px;
+    z-index:9999;
+}
+.answer-link-false2 {
+    margin:0 auto;
+    padding:5px;
+    font-size:12px;
+    z-index:9999;
+}
+.answer-link-false3 {
+    margin:0 auto;
+    padding:5px;
+    font-size:12px;
+    z-index:9999;
+}
+/*-------------Hint Window ------------*/
+.hint-contain {
+    background-color:#ffffff;
+    border-style:solid;
+    border-width: 5px;
+    width: 500px;
+    height: 500px;
+    -webkit-border-radius: 15px;
+}
+#slidenav {
+  margin:0 auto;
+  margin-top: 30px;
+  top: 200px;
+  left: -1000px;
+  width:800px;
+  height:350px;
+  padding:20px 50px;
+  position:absolute;
+  z-index: 9900;
+}
+#open {
+  margin:0 auto;
+  width:800px;
+  background:url(images/open.png);
+  text-align:center;
+  padding:5px;
+  font-size:30px;
+  z-index:9999;
+  text-align:right;
+}
+.hint-text {
+    margin: 30px 30px 30px 30px;
+}

@@ -1,0 +1,17 @@
+#slidenav {
+  margin:0 auto;
+  margin-top: 200px;
+  width:800px;
+  background:url(images/open.png);
+  height:350px;
+  padding:20px 50px;
+  position:absolute;
+}
+#open {
+  margin:0 auto;
+  width:200px;
+  background:url(images/open.png);
+  text-align:center;
+  padding:5px;
+  font-size:30px;
+}
