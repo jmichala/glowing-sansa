@@ -1,9 +1,9 @@
 body {
-    background-color: #5b0e00;
+    background-color: #3b0b0b;
     padding:0;
     font-family: arial, sans-serif;
     font-size: 12px;
-    color: #5b0e00; /*--background color --*/
+    color: #3b0b0b; /*--background color --*/
     min-width: 821px;
 }
 header h1{
@@ -25,7 +25,7 @@ a {
     margin: auto;
     padding: 0x;
     margin-top: 30px;
-    background-color: #FF1e00;
+    background-color: #FF0002;
     text-align: center;
     -webkit-border-radius: 15px;
 }
@@ -45,13 +45,13 @@ img.logo {
     border-top: solid #ffffff;
     height: 40px; /*-- Menu Height --*/
     margin: 0px 0 5px 0; /*-- How far the margin is from top bottom elements --*/
-    background-color:#BB0030;
+    background-color:#8a0808;
     padding: 0;
     -webkit-border-radius: 15px; /*------ Rounded Edges -----*/
 }
 .menuRect {
     display:block;
-    background-color: #BB0030;
+    background-color: #8a0808;
     height: 40px;
     width: 821px;
 }
@@ -76,7 +76,7 @@ img.logo {
     color:#ffffff;
     line-height: 35px; /*-- Menu Height--*/
     font-size: 16px;
-    background:#BB0030;
+    background:#8a0808;
     white-space: nowrap;
 }
 .main-menu ul li.selected a {
@@ -105,7 +105,7 @@ img.logo {
     background: #6b6b6b;
 }
 .main-menu li:hover li a:hover{
-    background: #BB0030;
+    background: #8a0808;
 }
 
 /*-- Center Content Section --*/
