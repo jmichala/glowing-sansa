@@ -1,0 +1,17 @@
+{
+	"0": {
+		"nw":1,
+		"nr":5,
+		"sn":1,
+		"sname":"Early Python",
+		"qn":1,
+		"pt":"code",
+		"ptext":"print 'hello'",
+		"ans":2,
+		"at":"output",
+		"a1":"print",
+		"a2":"hello",
+		"a3":"Print",
+		"a4":"Hello"
+	}
+}
