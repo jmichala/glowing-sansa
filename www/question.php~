@@ -131,7 +131,7 @@ $(document).ready(function() {
 		<table align= "center">	
 		<tr>
 		<td>
-			<div class = "<?php echo $lesson["qt"]; ?>-panel">
+			<div class = "black-panel">
 				<div class = "instruction"> </div> 
 				<div class = "q-container">
 					<p class = "question"> <?php echo $lesson["ptext"]; ?> </p>
