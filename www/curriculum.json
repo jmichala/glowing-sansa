@@ -7,14 +7,15 @@
 		"qn":1,
 		"pt":"code",
 		"ptext":"print 'hello'",
+		"qt":"options",
 		"ans":2,
-		"at":"output",
+		"at":"white",
 		"a1":"print",
 		"a2":"hello",
 		"a3":"Print",
 		"a4":"Hello",
 		"ht":"The print statement allows python to create output. The print will cause python to print out whatever immediately follows it."
-	}
+	},
 	"1": {
 		"nw":2,
 		"nr":4,
@@ -23,8 +24,9 @@
 		"qn":2,
 		"pt":"code",
 		"ptext":"print 'test'",
+		"qt":"options",
 		"ans":2,
-		"at":"output",
+		"at":"white",
 		"a1":"print",
 		"a2":"test",
 		"a3":"'test'",

@@ -90,7 +90,7 @@
             $_SESSION['user'] = $row;
             
             // Redirect the user to the private members-only page.
-            header("Location: private.php");
+            header("Location: choice.php");
             die("Redirecting to: private.php");
         }
         else

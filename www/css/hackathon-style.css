@@ -307,6 +307,28 @@ input.register {
     text-align: left;
     margin: 20px 10px 10px 50px;   
 }
+.white-panel {
+    background-color:#ffffff;
+    width:200px;
+    height:150px;
+    border-style:solid;
+    opacity:1;
+    border-width: 5px;
+    border-color:#5b0e00;
+    -webkit-border-radius: 15px;
+    margin: 2px 2px 2px 2px;
+}
+.black-panel {
+    background-color:#000000;
+    width:200px;
+    opacity:1;
+    height:150px;
+    border-style:solid;
+    border-width: 5px;
+    border-color:#5b0e00;
+    -webkit-border-radius: 15px;
+    margin: 2px 2px 2px 2px;
+}
 /*---------Answers----------*/
 .answer-panel {
     text-align: center;
@@ -322,77 +344,85 @@ input.register {
 }
 .answer-contain-false1 {
     background-color:#ffffff;
+    opacity:0;
     border-style:solid;
     border-width: 5px;
     border-color:#5b0e00;
     width: 200px;
     height: 150px;
     -webkit-border-radius: 15px;
-    margin: 2px 2px 2px 2px;
+    z-index:5000;
 }
 .answer-contain-false2 {
     background-color:#ffffff;
+    opacity:0;
     border-style:solid;
     border-width: 5px;
     border-color:#5b0e00;
     width: 200px;
     height: 150px;
     -webkit-border-radius: 15px;
-    margin: 2px 2px 2px 2px;
+    z-index:5000;
 }
 .answer-contain-false3 {
     background-color:#ffffff;
+    opacity:0;
     border-style:solid;
     border-width: 5px;
     border-color:#5b0e00;
     width: 200px;
     height: 150px;
     -webkit-border-radius: 15px;
-    margin: 2px 2px 2px 2px;
+    z-index:5000;
 }
 .answer-contain-true {
     background-color:#ffffff;
+    opacity:0;
     border-style:solid;
     border-width: 5px;
     border-color: #5b0e00;
     width: 200px;
     height: 150px;
     -webkit-border-radius: 15px;
-    margin: 2px 2px 2px 2px;
+    z-index:5000;
 }
 .answer-contain-true:hover {
     background-color: #6c6c6c;
+    opacity:1;
 }
 .answer-contain-false1:hover {
     background-color: #6c6c6c;
+    opacity:1;
 }
 .answer-contain-false2:hover {
     background-color: #6c6c6c;
+    opacity:1;
 }
 .answer-contain-false3:hover {
     background-color: #6c6c6c;
+    opacity:1;
 }
 .answer-link-true {
     margin:0 auto;
-    padding:5px;
+    padding:0px;
     font-size:12px;
     z-index:9999;
 }
 .answer-link-false1 {
     margin:0 auto;
-    padding:5px;
+    padding:0px;
     font-size:12px;
     z-index:9999;
 }
 .answer-link-false2 {
     margin:0 auto;
-    padding:5px;
+    padding:0px;
     font-size:12px;
     z-index:9999;
 }
 .answer-link-false3 {
     margin:0 auto;
-    padding:5px;
+    padding:0px;
     font-size:12px;
     z-index:9999;
 }

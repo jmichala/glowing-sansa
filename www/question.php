@@ -1,8 +1,9 @@
+
 <?php
     require("common.php");
     if(empty($_SESSION['user']))
     {
-        header("Location: acct/login.php");
+        header("Location: home.php");
         die("Redirecting to login.php");
     }
     // Everything below this point in the file is secured by the login system
@@ -17,8 +18,13 @@ $uid=htmlentities($_SESSION['user']['id'], ENT_QUOTES, 'UTF-8');
 $username=htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8');
 $lesson_num=htmlentities($_SESSION['user']['lesson'], ENT_QUOTES, 'UTF-8');
 
-?>
+/*foreach ($json_a as $k => $v) {
+   echo $k, ' : ', $v;
+}*/
 
+echo "DONE";
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -49,7 +55,7 @@ $(document).ready(function() {
 				$("#nextPage").animate({
 					left: '800px'
 				}, 500);	
-				$(".answer-contain-false1").css({"backgroundColor": "#DD0000"});
+				$(".answer-contain-false1").css({"backgroundColor": "#DD0000","opacity":"1"});
 				$("#nextPage").attr("href","#");
 			});
 		$('.answer-link-false3').click(
@@ -57,7 +63,7 @@ $(document).ready(function() {
 				$("#nextPage").animate({
 					left: '800px'
 				}, 500);	
-				$(".answer-contain-false3").css({"backgroundColor": "#DD0000"});
+				$(".answer-contain-false3").css({"backgroundColor": "#DD0000","opacity":"1"});
 				$("#nextPage").attr("href","#");
 			});	
 		$('.answer-link-false2').click(
@@ -65,7 +71,7 @@ $(document).ready(function() {
 				$("#nextPage").animate({
 					left: '800px'
 				}, 500);	
-				$(".answer-contain-false2").css({"backgroundColor": "#DD0000"});
+				$(".answer-contain-false2").css({"backgroundColor": "#DD0000","opacity":"1"});
 				$("#nextPage").attr("href","#");
 			});
 		$('.answer-link-true').click(
@@ -73,7 +79,7 @@ $(document).ready(function() {
 				$("#nextPage").animate({
 					left: '800px'
 				}, 500);
-				$(".answer-contain-true").css({"backgroundColor": "#00DD00"});
+				$(".answer-contain-true").css({"backgroundColor": "#00DD00","opacity":"1"});
 				$("#nextPage").attr("href","#");
 			});
     });
@@ -109,7 +115,7 @@ $(document).ready(function() {
 		</span>
 	</div>
 	<div class = "center-content">
-		<div class= "username-display"> Welcome, <?php echo $username; ?>.</div>
+		<div class= "username-display"> Welcome, <?php echo $username; ?></div>
 		<!-- Php script sends what section we are working on--> </div>
 		<div class = "section-title"> <span class="blue"> Section <?php echo $lesson["sn"]; ?> </span>: <?php echo $lesson["sname"]; ?> </div>
 		<div id="move-foreward">
@@ -124,8 +130,8 @@ $(document).ready(function() {
 		<table align= "center">	
 		<tr>
 		<td>
-			<div class = "question-panel">
-				<div class = "instruction"> <!--I.E. I don't think we need this?--> </div> 
+			<div class = "black-panel">
+				<div class = "instruction"> </div> 
 				<div class = "q-container">
 					<p class = "question"> <?php echo $lesson["ptext"]; ?> </p>
 				</div>
@@ -133,8 +139,14 @@ $(document).ready(function() {
 		</td>
 		<tr>
 		</table>
-		
+
+
 <?php
+
+
+if ($lesson["qt"] == "options")
+{
+
 //GENERATE LESSON BOXES
 $num=1;
 if ($lesson["ans"] == 1)
@@ -153,11 +165,15 @@ if ($lesson["ans"] == 4)
 { $b4 = "true"; }
 else
 { $b4 = "false" . $num; }
+
+
 $boxes[0] = '
 				<td>
-					<a href="#" class="answer-link-' . $b1 . '">
-					<div class = "answer-contain-' . $b1 . '"> 
-						<p>' . $lesson["a1"] . '</p>
+					<a href="#" class="answer-link-'. $b1 .'">
+					<div class="'. $lesson["at"] .'-panel">
+					<div class = "answer-contain-'. $b1 .'"> 
+						<p><!--answer 4 text here--> '. $lesson["a1"] .'</p>
+					</div>
 					</div>
 					</a>
 				</td>
@@ -165,8 +181,10 @@ $boxes[0] = '
 $boxes[1] = '
 			<td>
 				<a href="#" class="answer-link-'. $b2 .'">
+				<div class="'. $lesson["at"] .'-panel">
 				<div class = "answer-contain-'. $b2 .'"> 
-					<p>' . $lesson["a2"] . '</p>
+					<p>'. $lesson["a2"] .'</p>
+				</div>
 				</div>
 				</a>
 			</td>
@@ -174,8 +192,10 @@ $boxes[1] = '
 $boxes[2] = '
 				<td>
 					<a href="#" class="answer-link-'. $b3 .'">
+					<div class="'. $lesson["at"] .'-panel">
 					<div class = "answer-contain-'. $b3 .'"> 
-						<p>' . $lesson["a3"] . '</p>
+						<p>'. $lesson["a3"] .' </p>
+					</div>
 					</div>
 					</a>
 				</td>
@@ -183,26 +203,38 @@ $boxes[2] = '
 $boxes[3] = '
 			<td>
 				<a href="#" class="answer-link-'. $b4 .'">
+				<div class="'. $lesson["at"] .'-panel">
 				<div class = "answer-contain-'. $b4 .'"> 
-					<p> ' . $lesson["a4"] . '</p>
+					<p>'. $lesson["a4"] .'</p>
+				</div>
 				</div>
 				</a>
 			</td>
 ';
-
 shuffle($boxes);
-?>
 
-
+echo '
 		<!--Answers-->
 		<table class = "answer-panel" align="center">
 			<tr>
-<?php echo $boxes[0], $boxes[1]; ?>
+';
+echo $boxes[0], $boxes[1];
+echo '
 			</tr>
 			<tr>
-<?php echo $boxes[2], $boxes[3]; ?>
+';
+echo $boxes[2], $boxes[3];
+echo '
 			</tr>
 		</table>	
+';
+}
+?>
+
+		
+
+
+
 		<!-- Hint Window -->
 		<div id="slidenav">
 			<div class="hint-contain">
