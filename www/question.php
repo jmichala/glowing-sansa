@@ -13,6 +13,8 @@ $string=file_get_contents("curriculum.json");
 $json_a=json_decode($string, true);
 $lesson=$json_a[$_SESSION['user']['lesson']];
 
+echo "SESSION LESSON" . $_SESSION['user']['lesson'];
+
 //Get values from user for display
 $uid=htmlentities($_SESSION['user']['id'], ENT_QUOTES, 'UTF-8');
 $username=htmlentities($_SESSION['user']['username'], ENT_QUOTES, 'UTF-8');
@@ -56,7 +58,8 @@ $(document).ready(function() {
 					left: '900px'
 				}, 500);	
 				$(".answer-contain-false1").css({"backgroundColor": "#DD0000","opacity":"1"});
-				$("#nextPage").attr("href","nextlesson.php?id=. <?php echo $lesso["nw"]; ?>");
+				$("#nextPage a").attr("href","nextlesson.php?id=<?php echo $lesson["nw"]; ?>");
+				document.getElementById("arrow").href="nextlesson.php?id=<?php echo $lesson["nw"]; ?>";
 			});
 		$('.answer-link-false3').click(
 			function(){
@@ -64,7 +67,8 @@ $(document).ready(function() {
 					left: '900px'
 				}, 500);	
 				$(".answer-contain-false3").css({"backgroundColor": "#DD0000","opacity":"1"});
-				$("#nextPage").attr("href","nextlesson.php?id=. <?php echo $lesson["nw"]; ?>");
+				$("#nextPage a").attr("href","nextlesson.php?id=<?php echo $lesson["nw"]; ?>");
+				document.getElementById("arrow").href="nextlesson.php?id=<?php echo $lesson["nw"]; ?>";
 			});	
 		$('.answer-link-false2').click(
 			function(){
@@ -72,7 +76,8 @@ $(document).ready(function() {
 					left: '900px'
 				}, 500);	
 				$(".answer-contain-false2").css({"backgroundColor": "#DD0000","opacity":"1"});
-				$("#nextPage").attr("href","nextlesson.php?id=. <?php echo $lesson["nw"]; ?>");
+				$("#nextPage a").attr("href","nextlesson.php?id=<?php echo $lesson["nw"]; ?>");
+				document.getElementById("arrow").href="nextlesson.php?id=<?php echo $lesson["nw"]; ?>";
 			});
 		$('.answer-link-true').click(
 			function(){
@@ -80,18 +85,13 @@ $(document).ready(function() {
 					left: '900px'
 				}, 500);
 				$(".answer-contain-true").css({"backgroundColor": "#00DD00","opacity":"1"});
-				$("#nextPage").attr("href","nextlesson.php?id= <?php echo $lesson["nr"]; ?>");
-			});
-		$('go-next-arrow').click(
-			funcion(){
-				$("nextPage").animate({
-					left:'900px'
-				},500);
-				$("#nextPage").att("href","nextlesson.php?id= <?php echo $lesson["nr"]; ?>");
+				$("#nextPage a").attr("href","nextlesson.php?id=<?php echo $lesson["nr"]; ?>");
+				document.getElementById("arrow").href="nextlesson.php?id=<?php echo $lesson["nr"]; ?>";
 			});
     });
 </script>
-<!-- "nextlesson.php?id=". <?php echo $lesso["nw"]; ?> -->
+<!-- 
+-->
 <header>
 	<h1> Cool </h1>
 </header>
@@ -128,7 +128,7 @@ $(document).ready(function() {
 		<div class = "section-title"> <span class="blue"> Section <?php echo $lesson["sn"]; ?> </span>: <?php echo $lesson["sname"]; ?> </div>
 		<div id="move-foreward">
 			<div id="nextPage">
-				<a href ='#'>
+				<a id="arrow" href ='#'>
 					<img src="images/green-arrow.png"/>
 				</a>
 			</div>	
@@ -138,7 +138,7 @@ $(document).ready(function() {
 		<table align= "center">	
 		<tr>
 		<td>
-			<div class = "<?php echo $lesson["qt"]; ?>-panel">
+			<div class = "<?php echo $lesson["pt"]; ?>-panel">
 				<div class = "instruction"> </div> 
 				<div class = "q-container">
 					<p class = "question"> <?php echo $lesson["ptext"]; ?> </p>
