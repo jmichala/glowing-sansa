@@ -32,7 +32,7 @@
 		"a3":"'test'",
 		"a4":"hello",
 		"ht":"The print statement allows python to create output. The print will cause python to print out whatever immediately follows it."
-	}
+	},
 
 
 
@@ -45,7 +45,7 @@
                 "sname":"Recursion",
                 "qn":1,
                 "pt":"black",
-                "ptext":"x=3<br />while (x > 0):<br />&nsbp;&nsbp;if (x==2): print x<br />&nsbp;&nsbp;x=x-1",
+                "ptext":"x=3<br />while (x > 0):<br />&nbsp;&nbsp;if (x==2):<br />&nbsp;&nbsp;&nbsp;&nbsp;print x<br />&nbsp;&nbsp;&nbsp;&nbsp;x=x-1",
                 "qt":"options",
                 "ans":1,
                 "at":"white",
@@ -54,7 +54,7 @@
                 "a3":"1",
                 "a4":"0",
                 "ht":"While statements check the condition stated next to them at the end of each iteration. You always must be sure to indent the lines within the while statement as well. The if statement will execute the text to the right of it when the condition next to it in parentheses is true, like the while statement. What happens to x with time?"
-        }
+        },
 	"58": {
 		"nw":59,
                 "nr":60,
@@ -62,7 +62,7 @@
                 "sname":"Recursion",
                 "qn":2,
                 "pt":"black",
-                "ptext":"def test(n):<br />&nsbp;&nsbp;if (n==0): print 0<br />&nsbp;&nsbp;else: <br />&nsbp;&nsbp;&nsbp;&nsbp;print n<br />&nsbp;&nsbp;&nsbp;&nsbp; test(n-1)<br />test(3)",
+                "ptext":"def test(n):<br />&nbsp;&nbsp;if (n==0): print 0<br />&nbsp;&nbsp;else: <br />&nbsp;&nbsp;&nbsp;&nbsp;print n<br />&nbsp;&nbsp;&nbsp;&nbsp;test(n-1)<br />test(3)",
                 "qt":"options",
                 "ans":2,
                 "at":"white",
@@ -71,5 +71,57 @@
                 "a3":"0<br />1<br />2",
                 "a4":"2<br />1<br />0",
                 "ht":"This function calling itself is referred to as recursion. In a sense, it is very similar to a while loop. Once again, the execution will stop when n=0."
+        },
+	"64": {
+		"nw":65,
+                "nr":70,
+                "sn":10,
+                "sname":"Scope",
+                "qn":1,
+                "pt":"white",
+                "ptext":"3",
+                "qt":"options",
+                "ans":1,
+                "at":"white",
+                "a1":"x=0<br />&nbsp;&nbsp;if (x==0):<br />&nbsp;&nbsp;&nbsp;&nbsp;x=3<br />print x",
+                "a2":"x=0<br />&nbsp;&nbsp;if (x==0):<br />&nbsp;&nbsp;&nbsp;&nbsp;x=3<br />print x-1",
+                "a3":"x=0<br />&nbsp;&nbsp;if (x==0):<br />&nbsp;&nbsp;&nbsp;&nbsp;x=2<br />print x",
+                "a4":"x=0<br />&nbsp;&nbsp;if (x==0):<br />&nbsp;&nbsp;&nbsp;&nbsp;y=3<br />print x",
+                "ht":"If statements, despite having separate blocks of code, will actually be able to modify the original definitions of the code. You will see an example of where the scope will be more significant soon."
+        },
+	"65": {
+		"nw":66,
+                "nr":70,
+                "sn":10,
+                "sname":"Scope",
+                "qn":2,
+                "pt":"black",
+                "ptext":"def deltax(): x=3<br />x=2<br />deltax()<br />x=x-2<br />print x",
+                "qt":"options",
+                "ans":1,
+                "at":"white",
+                "a1":"0",
+                "a2":"ERROR",
+                "a3":"3",
+                "a4":"1",
+                "ht":"If statements, despite having separate blocks of code, will actually be able to modify the original definitions of the code. You will see an example of where the scope will be more significant soon."
+        },
+	"66": {
+		"nw":67,
+                "nr":70,
+                "sn":10,
+                "sname":"Scope",
+                "qn":2,
+                "pt":"black",
+                "ptext":"Write a function test that takes x as input, prints it, and then returns the same value.",
+                "qt":"code",
+                "ans":1,
+                "at":"white",
+                "a1":"0",
+                "a2":"ERROR",
+                "a3":"3",
+                "a4":"1",
+                "ht":"def test(x):<br />&nbsp;&nbsp;print x<br />&nbsp;&nbsp;return x",
+		"ht2":"				<li>Funcion definition</li><li>Output</li><li>Function ending</li>"
         }
 }
