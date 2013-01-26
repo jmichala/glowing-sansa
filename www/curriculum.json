@@ -122,6 +122,6 @@
                 "a3":"3",
                 "a4":"1",
                 "ht":"def test(x):<br />&nbsp;&nbsp;print x<br />&nbsp;&nbsp;return x",
-		"ht2":"				<li>Funcion definition</li><li>Output</li><li>Function ending</li>"
+		"ht2":"<li>Funcion definition</li><li>Output</li><li>Function ending</li>"
         }
 }
