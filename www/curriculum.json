@@ -33,4 +33,43 @@
 		"a4":"hello",
 		"ht":"The print statement allows python to create output. The print will cause python to print out whatever immediately follows it."
 	}
+
+
+
+
+
+	"57": {
+		"nw":58,
+                "nr":60,
+                "sn":9,
+                "sname":"Recursion",
+                "qn":1,
+                "pt":"black",
+                "ptext":"x=3<br />while (x > 0):<br />&nsbp;&nsbp;if (x==2): print x<br />&nsbp;&nsbp;x=x-1",
+                "qt":"options",
+                "ans":1,
+                "at":"white",
+                "a1":"2",
+                "a2":"3",
+                "a3":"1",
+                "a4":"0",
+                "ht":"While statements check the condition stated next to them at the end of each iteration. You always must be sure to indent the lines within the while statement as well. The if statement will execute the text to the right of it when the condition next to it in parentheses is true, like the while statement. What happens to x with time?"
+        }
+	"58": {
+		"nw":59,
+                "nr":60,
+                "sn":9,
+                "sname":"Recursion",
+                "qn":2,
+                "pt":"black",
+                "ptext":"def test(n):<br />&nsbp;&nsbp;if (n==0): print 0<br />&nsbp;&nsbp;else: <br />&nsbp;&nsbp;&nsbp;&nsbp;print n<br />&nsbp;&nsbp;&nsbp;&nsbp; test(n-1)<br />test(3)",
+                "qt":"options",
+                "ans":2,
+                "at":"white",
+                "a1":"0<br />1<br />2<br />3",
+                "a2":"3<br />2<br />1<br />0",
+                "a3":"0<br />1<br />2",
+                "a4":"2<br />1<br />0",
+                "ht":"This function calling itself is referred to as recursion. In a sense, it is very similar to a while loop. Once again, the execution will stop when n=0."
+        }
 }
