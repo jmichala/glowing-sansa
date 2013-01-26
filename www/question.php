@@ -53,7 +53,7 @@ $(document).ready(function() {
 		$('.answer-link-false1').click(
 			function(){
 				$("#nextPage").animate({
-					left: '800px'
+					left: '900px'
 				}, 500);	
 				$(".answer-contain-false1").css({"backgroundColor": "#DD0000","opacity":"1"});
 				$("#nextPage").attr("href","nextlesson.php?id=. <?php echo $lesso["nw"]; ?>");
@@ -61,26 +61,33 @@ $(document).ready(function() {
 		$('.answer-link-false3').click(
 			function(){
 				$("#nextPage").animate({
-					left: '800px'
+					left: '900px'
 				}, 500);	
 				$(".answer-contain-false3").css({"backgroundColor": "#DD0000","opacity":"1"});
-				$("#nextPage").attr("href","nextlesson.php?id=. <?php echo $lesso["nw"]; ?>");
+				$("#nextPage").attr("href","nextlesson.php?id=. <?php echo $lesson["nw"]; ?>");
 			});	
 		$('.answer-link-false2').click(
 			function(){
 				$("#nextPage").animate({
-					left: '800px'
+					left: '900px'
 				}, 500);	
 				$(".answer-contain-false2").css({"backgroundColor": "#DD0000","opacity":"1"});
-				$("#nextPage").attr("href","nextlesson.php?id=. <?php echo $lesso["nw"]; ?>");
+				$("#nextPage").attr("href","nextlesson.php?id=. <?php echo $lesson["nw"]; ?>");
 			});
 		$('.answer-link-true').click(
 			function(){
 				$("#nextPage").animate({
-					left: '800px'
+					left: '900px'
 				}, 500);
 				$(".answer-contain-true").css({"backgroundColor": "#00DD00","opacity":"1"});
-				$("#nextPage").attr("href","nextlesson.php?id= <?php echo $lesso["nr"]; ?>");
+				$("#nextPage").attr("href","nextlesson.php?id= <?php echo $lesson["nr"]; ?>");
+			});
+		$('go-next-arrow').click(
+			funcion(){
+				$("nextPage").animate({
+					left:'900px'
+				},500);
+				$("#nextPage").att("href","nextlesson.php?id= <?php echo $lesson["nr"]; ?>");
 			});
     });
 </script>
@@ -230,6 +237,40 @@ echo '
 		</table>	
 ';
 }
+else if ($lesson["qt"] == "code")
+{
+echo '		<table class = "answer-panel" align="center">
+			<tr>
+			<td>
+			<div class="white-panel">
+				<ul class="codeLines">
+					<li> <input type="text"> </li>
+					<li> <input type="text"> </li>
+					<li> <input type="text"> </li>
+					<li> <input type="text"> </li>
+					<li> <input type="text"> </li>
+				</ul>	
+			</div>
+			</td>
+			<td>
+				<div class="white-panel">
+					<ul class="codeLines">
+						<li>  Hint<!--hint about code line --> </li>
+						<li> Hint<!--hint about code line --> </li>
+						<li> Hint<!--hint about code line --> </li>
+						<li> Hint <!--hint about code line --> </li>
+						<li>  Hint<!--hint about code line --> </li>
+					</ul>	
+				</div>
+			</tr>
+			<tr>
+			<td>
+			<a href="#" id ="go-next-arrow"> Proceed </a>
+			</td>
+			</tr>	
+		</table>';
+}
+
 ?>
 
 		
