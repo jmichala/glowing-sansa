@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Vivek Krishnan's List</title>
+		<script src = "js/jquery.js"></script>
+		<link rel="stylesheet" type = "text/css" href="css/slidedeck.css">
+	</head>
+	<body>
+	<script>
+	$(document).ready(function() {
+	    $('#slidenav').animate({
+	        left: '-1000px'
+	    }, 200);
+	    $('#open a').toggle(
+	        function(){
+	            $('#slidenav').animate({
+	                left: '40'
+	            }, 500);
+	        },
+	        function(){
+	            $('#slidenav').animate({
+	                left: '-1000px'
+	            }, 500);
+	    });
+	    });
+	</script>
+		<div id="slidenav">
+		        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et urna erat, sed ullamcorper enim. Maecenas eu venenatis metus. Mauris tortor eros, condimentum vel faucibus ac, commodo fermentum magna. Fusce posuere interdum arcu, eget ornare eros tempus et. Maecenas convallis faucibus sem sed commodo. Donec leo nisi, consequat sed luctus eu, pellentesque eu nibh. Vivamus sed quam a tortor lobortis iaculis. Phasellus et odio sed tortor interdum accumsan. Duis tempor condimentum rhoncus. Maecenas lacinia, nulla ac adipiscing mollis, augue felis luctus lectus, quis ultrices nisl odio a diam. Nam massa sapien, consequat nec mollis eget, sodales ac velit. Maecenas vehicula, ante eu rutrum elementum, lorem urna luctus libero, at pulvinar leo turpis et quam. Maecenas tristique pharetra placerat. Nam a justo risus. Nam felis nibh, adipiscing id ornare ac, malesuada sed mauris. Suspendisse potenti.
+
+		Quisque ullamcorper tortor eget quam fermentum nec laoreet est pharetra. Nullam vel massa id magna imperdiet faucibus in eleifend leo. Etiam tincidunt tellus neque, sit amet sodales lacus. Nullam venenatis rutrum blandit. Etiam id lorem id nisi elementum lobortis. Curabitur ac condimentum erat. Nam fermentum dictum pretium. Fusce feugiat, purus nec pellentesque porttitor, nisl diam pharetra enim, et lobortis nibh orci venenatis orci. Sed nibh odio, facilisis a cursus nec, tristique in orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris massa neque, tincidunt a sollicitudin eu, tincidunt et arcu. Duis mauris felis, feugiat pretium sodales sagittis, facilisis aliquam diam. Quisque tristique, turpis vitae tincidunt venenatis, nibh diam ornare tellus, sed egestas mauris velit quis magna. Aenean convallis molestie neque, eu dictum neque pretium eget. Phasellus ut orci vel ligula mollis mollis vitae eget augue. Maecenas vitae risus purus. Quisque justo tortor, congue eu tincidunt ut, ultricies a mauris. Aliquam vel eleifend turpis. Nulla facilisi.
+		    </div>
+		    <div id="open">
+		        <a href="#">slide</a>
+		    </div>
+		    <div id="holder">
+		        <div id="header">
+		        <h1>TITLE HERE</h1>
+		        </div>
+		        <div id="contact">
+		        </div>
+		    </div>
+		
+	</body>
+</html>

@@ -35,7 +35,7 @@ a {
     padding: 0px;
 }
 img.logo {
-    padding :30 0 0 0px;
+    padding :0 0 0 0px;
     position:absolute;
     left:50%;
 }
@@ -113,7 +113,7 @@ img.logo {
     width:821px;
     height:auto;
     clear:both;
-    padding: 0 0 30px 0;
+    padding: 0 0 0px 0;
     text-align:center;
 }
 .username-display {
@@ -127,7 +127,7 @@ img.logo {
     font-size: 20px;
     text-align: left;
     margin-left: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     color: #ffffff;
 }
 span.blue {
@@ -142,14 +142,145 @@ span.blue {
     position: absolute;
     margin-right: 100px;
     text-align: right;
-    left: 3000px;
+    left: -1000px;
     top:200px;
     height: 50px;
     z-index:990;
     width: 100px;
     height: 100px;
-    padding: 20px 50px;
+    padding: 20px 0px;
 }
+.title{ /*-- Title Elements(like h1) --*/
+    width:auto;
+    padding: 0px 0 0px 0;
+    font-size: 20px;
+    color: #ffffff; /*--- Title Color --*/
+    font-weight: normal;
+    letter-spacing: -.05em;
+    margin:2px 0;
+    position: relative;
+}
+.features {
+    padding:5px 0 0 0px;
+    margin: 20px 30px 20px 10px;
+    background-color: #FFCC66;
+    -webkit-border-radius:15px;
+}
+/*---- Welcome Box -------*/
+.welcome-info{
+    width:400px;
+    height:150px;
+    padding: 10px;
+    -webkit-border-radius: 15px;
+    background-color: #ffffff; /*-- Welcome Box Color --*/
+}
+
+.features p{
+    padding: 10px 15px 10px 15px;
+}
+
+/*----- Welcome List Styles -------*/
+ul.list {
+    list-style: none;
+    padding-bottom: 20px;
+    margin:0px;
+}
+ul.list li{
+    height: 20px;
+    width: auto;
+    padding: 5px 15px 2px 15px;
+    margin: 0;
+    color: #36322b;
+    text-align: left;
+    text-decoration: none;
+    line-height:24px;
+}
+ul.list li:hover{
+    background-color: #e3e3e3;
+}
+
+/*-- Center Content ----*/
+.center-content {
+    width:821px;
+    height:auto;
+    clear:both;
+    padding: 0px 0 0px 0;
+    background-color:#EE0000;
+}
+.center-left{
+    width: 500px;
+    float: left;
+    padding: 10px 0 10px 10px;
+}
+.center-right{
+    width:300px;
+    float: left;
+    padding: 10px 0 10px 0;
+}
+/*---------------Login Form ------------*/
+.text-box{
+    width:278px;
+    height:144px;
+    padding: 15px 10px 0 10px;
+    margin-bottom: 20px;
+    background-image: url("images/text-gradient.png") no-repeat 0 center;
+    background-color: #BB0030;
+    display: block;
+    -webkit-border-radius: 15px;
+    color: #eeeeee;
+}
+.login-form-row{
+    float: left;
+    padding: 4px 0 4px 0;
+    color: #eeeeee;
+}
+label.login-label {
+    width:70px;
+    float:left;
+    padding:3px 5px 0 0;
+    text-align:right;
+    color: #eeeeee;
+}
+input.login-input{
+    width:153px;
+    height:18px;
+    float: left;
+    border: 1px #9dbbc6 solid;
+    background-color: #fff;
+    color: #eeeeee;
+}
+input.login{
+    float:right;
+    padding:10px 20px 0 0;
+}
+.register-form-row{
+    float: left;
+    padding: 4px 0 4px 0;
+    color: #000000;
+}
+label.register-label {
+    width:70px;
+    float:left;
+    padding:3px 5px 0 0;
+    text-align:right;
+    color: #000000;
+}
+input.register-input{
+    width:153px;
+    height:18px;
+    float: left;
+    border: 1px #9dbbc6 solid;
+    background-color: #fff;
+    color: #eeeeee;
+}
+input.register {
+    float:right;
+    padding:10px 20px 0 0;
+}
+.software-image {
+    margin-bottom:20px;
+}
+
 
 /*----------------Question-------------*/
 .question-panel {
@@ -174,13 +305,12 @@ span.blue {
 }
 .question {
     text-align: left;
-    margin: 20px 10px 10px 50px;
-    
+    margin: 20px 10px 10px 50px;   
 }
 /*---------Answers----------*/
 .answer-panel {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 5px;
     margin-bottom: 0px;
     border-color:#5b0e00;
 }
@@ -275,6 +405,28 @@ span.blue {
     height: 500px;
     -webkit-border-radius: 15px;
 }
+.register-contain {
+    background-color:#ffffff;
+    border-style:solid;
+    border-width: 5px;
+    padding: 20px;
+    width: 500px;
+    height: 450px;
+    -webkit-border-radius: 15px;
+}
+
+.pot-pourri{
+    margin-top: 20px;
+}
+.ask-row{
+    margin-top: 20px;
+}
+.submit-row{
+    margin-top: 10px;
+    text-align:right;
+    margin-right: 40px;
+    font-size: 16px;
+}
 #slidenav {
   margin:0 auto;
   margin-top: 30px;
@@ -286,6 +438,19 @@ span.blue {
   position:absolute;
   z-index: 9900;
 }
+#slidenav-main {
+  margin:0 auto;
+  margin-top: 30px;
+  top: 100px;
+  left: -1000px;
+  padding:20px 50px;
+  position:absolute;
+  z-index: 9900;
+}
+#whiteSpace{
+    color:#ffffff;
+    font-size:1px;
+}
 #open {
   margin:0 auto;
   width:800px;
@@ -295,6 +460,20 @@ span.blue {
   font-size:30px;
   z-index:9999;
   text-align:right;
+  color:#ffffff;
+  font-size:16px;
+}
+#open-main {
+  margin:0 auto;
+  width:200px;
+  text-align:center;
+  background:url(images/open.png);
+  padding:5px;
+  font-size:16px;
+  z-index:9999;
+  text-align:right;
+  color:#ffffff;
+  font-size:16px;
 }
 .hint-text {
     margin: 30px 30px 30px 30px;

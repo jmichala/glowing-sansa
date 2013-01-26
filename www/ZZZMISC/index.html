@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <title>To Do List</title>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/underscore.js"></script>
+  <!--<link rel="stylesheet" type="text/css" href="sample.css">-->
+</head>
+<body>
+
+<div class="to-do-list">
+
+  <header>
+    <input id="new-task" autofocus placeholder="New Task"/>
+    <button id="new-task-button">Add</button>
+  </header>
+
+  <ul id="task-list"></ul>
+  <a href='#' id="clear-complete-button">Clear Completed Tasks</a>
+
+</div>
+<style>
+  .complete{
+    opacity: 0.5;
+    text-decoration:line-through;
+  }
+</style>
+<script type="text/javascript">
+
+  var new_task = $('#new-task');
+  var new_task_button = $('#new-task-button');
+  var task_list = $('#task-list');
+  var clear_complete_button = $('#clear-complete-button');
+
+  clear_complete_button.click(clearComplete);
+  new_task_button.click(addTodo);
+  new_task.keypress(function(e){
+    if (e.keyCode === 13) addTodo();
+  });
+
+  function addTodo(){
+    // Create a new <li> element representing a todo
+    var todo = $('<li />', { 
+      text: new_task.val(),
+      click: toggleComplete
+    });
+    task_list.append(todo);
+    new_task.val('');
+    new_task.focus();
+  }
+
+  function toggleComplete(){
+    $(this).toggleClass('complete');
+  }
+
+  function clearComplete(){
+    $('.complete').remove();
+  }
+
+</script>
+
+</body>
+</html>

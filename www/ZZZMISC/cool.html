@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 15px;
+}
+
+#left {
+  position: absolute;
+  background-color: blue;
+  -webkit-transition: left 1s ease-in; 
+}
+
+#right {
+  position: absolute;
+  left: 50px;
+  background-color: green;
+  -webkit-transition: left 1s ease-in; 
+}
+
+#left.animate {
+  left: -50px;
+}
+
+#right.animate {
+  left: 0px;
+}
+
+#container {
+  position: relative;
+  overflow:hidden;
+}
+</style>
+<script>
+
+function animate() {
+  document.getElementById('left').className = 'animate';
+  document.getElementById('right').className = 'animate';
+}
+</script>
+</head>
+<body>
+<div id='container'><div id='left'></div><div id='right'></div></div>
+<input type='button' onclick='animate();' value='Animate!'></input>
+</body>
+</html>

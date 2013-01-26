@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <title>Food Finder</title>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/underscore.js"></script>
+  <link rel="stylesheet" type="text/css" href="sample.css">
+</head>
+<body>
+
+<div class="food-finder">
+
+  <header>
+    <input id="search" autofocus placeholder="Search"/>
+    <button id="search-button">Find</button>
+  </header>
+
+  <ul id="results"></ul>
+
+</div>
+
+<script type="text/javascript">
+
+  var search_input = $('#search');
+  var search_button = $('#search-button');
+  var results = $('#results');
+
+  search_button.click(search);
+  search_input.keypress(function(e){
+    if (e.keyCode === 13) search();
+  });
+
+  function search(){
+
+    // Use the YQL API to make a string describing what we want
+    var queryString = "select * from local.search where zip="+ 
+                      "'15213' and query='" + search_input.val() + "'";
+    $.ajax({
+      // YQL API base URL
+      url : 'http://query.yahooapis.com/v1/public/yql',
+
+      // Specify that we want JSONP
+      jsonp : 'callback',
+      dataType : 'jsonp',
+      data : {
+        q : queryString,
+        format : 'json'
+      },
+
+      // Specify the function that should be called when we get back data.
+      success : addLocations
+    });
+  }
+
+  function addLocations(data){
+
+    // Clear the HTML list
+    results.html('');
+
+    // Focus on the array of locations
+    var locations = data.query.results.Result;
+
+    // For each location, call addLocation() to add it to the HTML
+    for(var i=0; i<locations.length; i++){
+      addLocation(locations[i]);
+    }
+
+    // Clear the search field
+    search_input.val('');
+  }
+
+  function addLocation(data){
+
+    // Create a string describing the location
+    var locationText = data.Title + "<br/><span>" + 
+      data.Address + ", " + data.Phone + "</span>";
+
+    var location = $('<li />', { 
+      html: locationText,
+      // If clicked, point the browser to a related URL
+      click: function(){window.location = data.Url;}
+    });
+
+    // Add the location to the HTML list
+    results.append(location);
+  }
+
+</script>
+
+</body>
+</html>

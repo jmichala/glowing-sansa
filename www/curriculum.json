@@ -1,7 +1,7 @@
 {
 	"0": {
 		"nw":1,
-		"nr":5,
+		"nr":4,
 		"sn":1,
 		"sname":"Early Python",
 		"qn":1,
@@ -13,6 +13,22 @@
 		"a2":"hello",
 		"a3":"Print",
 		"a4":"Hello",
-		"ht":"Hint..."
+		"ht":"The print statement allows python to create output. The print will cause python to print out whatever immediately follows it."
+	}
+	"1": {
+		"nw":2,
+		"nr":4,
+		"sn":1,
+		"sname":"Early Python",
+		"qn":2,
+		"pt":"code",
+		"ptext":"print 'test'",
+		"ans":2,
+		"at":"output",
+		"a1":"print",
+		"a2":"test",
+		"a3":"'test'",
+		"a4":"hello",
+		"ht":"The print statement allows python to create output. The print will cause python to print out whatever immediately follows it."
 	}
 }
