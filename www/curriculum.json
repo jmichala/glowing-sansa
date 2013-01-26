@@ -84,8 +84,7 @@
 		"a3": "0\n1\n2\n5\n8",
 		"a4": "0 1 2 5 8",
 		"ht": "<li> %s operator refers to string formating</li>       <li> the [] indicate a substring </li>       <li> string multiply works like addition </li>       <li> strings can be combined through addition  </li>       <li> .find() returns the index of an element </li>",
-		"ht2": "'Today I fed my lion and my tiger'<br/>        'FDB' <br/>        'hellohellohello'<br/>        'helloworld'<br/>
-        2"
+		"ht2": "'Today I fed my lion and my tiger'<br/>        'FDB' <br/>        'hellohellohello'<br/>        'helloworld'<br/>  2"
 	},
 
 	"48": {
