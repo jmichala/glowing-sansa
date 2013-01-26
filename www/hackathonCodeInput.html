@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<script src="js/jquery.js"> </script>
+	<title> Code Learning </title>
+	<link rel="stylesheet" type = "text/css" href="css/hackathon-style.css" />
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#slidenav').animate({
+        left: '-1000px'
+    }, 200);
+    $('#open a').toggle(
+        function(){
+            $('#slidenav').animate({
+                left: '23%'
+            }, 500);
+        },
+		function(){
+	        $('#slidenav').animate({
+	            left: '-1000px'
+	        }, 500);
+		});
+	$('#submit-row a').click(
+	    function(){
+	        $('#slidenav').animate({
+	            left: '-1000px'
+	        }, 500);
+	    });
+    });
+</script>
+<header>
+	<h1> Cool </h1>
+</header>
+	
+<div id="main-content">
+	<!-- Main Menu For the Selection of Topics -->
+	<div class="main-menu">
+		<span class="menuRect">
+			<ul>
+				<li> <a href='#'> Home </a> </li>
+				<li> <a href='#'> Courses </a> 
+					<ul>
+						<li> <a href='#'> Python </a> </li>
+						<li> <a href='#'> Ruby </a> </li>
+						<li> <a href='#'> Obj.C </a> </li>
+					</ul>
+				</li>
+				<li> <a href=****> Information </a> 
+					<ul>
+						<li> <a href=****> about us </a> </li>
+						<li> <a href=****> Cool Stuff </a> </li>
+						<li> <a href=****> Hello </a> </li>
+					</ul>
+				</li>
+					
+				<li> <a href=****> Link Name </a> </li>
+				<li> <a href=****> Link Name </a> </li>
+			</ul>
+		</span>
+	</div>
+	<div class = "center-content">
+		<div class= "username-display"> Welcome Username!</div>
+		<!-- Php script sends what section we are working on--> </div>
+		<div class = "section-title"> <span class="blue"> Section # </span>: Name of Section </div>
+		<div id="move-foreward">
+			<div id="nextPage">
+				<a href ='#'>
+					<img src="images/green-arrow.png"/>
+				</a>
+			</div>	
+		</div>
+		
+		<!-- Question Panel -->
+		<table align= "center">	
+		<tr>
+		<td>
+			<div class = "black-panel">
+				<div class = "instruction"> Predict the Result <!--I.E. Predict the Output!--> </div> 
+				<div class = "q-container">
+					<p class = "question"> int i = 0 <br>while i < 10:<br>print i<!--question text here--> </p>
+				</div>
+			</div>
+		</td>
+		<tr>
+		</table>
+		
+		<!--Answers-->
+		<table class = "answer-panel" align="center">
+			<tr>
+			<td>
+			<div class="white-panel">
+				<ul class="codeLines">
+					<li> <input type="text"> </li>
+					<li> <input type="text"> </li>
+					<li> <input type="text"> </li>
+					<li> <input type="text"> </li>
+					<li> <input type="text"> </li>
+				</ul>	
+			</div>
+			</td>
+			<td>
+				<div class="white-panel">
+					<ul class="codeLines">
+						<li>  Hint<!--hint about code line --> </li>
+						<li> Hint<!--hint about code line --> </li>
+						<li> Hint<!--hint about code line --> </li>
+						<li> Hint <!--hint about code line --> </li>
+						<li>  Hint<!--hint about code line --> </li>
+					</ul>	
+				</div>
+			</tr>	
+		</table>
+		<!-- Hint Window -->
+		<div id="slidenav">
+			<div class="hint-contain">
+				<div class="hint-text">
+					<!--Input Answers to the code input here -->
+					<ul class="codeLinesAnswers">
+						<li>  Why is the text so small </li>
+						<li> Answer Line 2 </li>
+						<li> Answer Line 3 </li>
+						<li> Answer Line 4 </li>
+						<li>  Answer Line 5 </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="open">
+			<a href='#'> 
+				<img src="images/questionMark.png" />
+			</a>
+		</div>
+		<!--   End of Center Content -->
+	</div>
+</div>
+<div class="footer"> 
+	<!--Footer Stuff-->
+</div>
+</body>
+</html>
+		
+	
